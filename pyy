@@ -1,0 +1,21 @@
+path = 'yash.txt'
+
+file = open(path, 'r')
+    
+now = 0
+noc = 0
+nol = 0
+
+for line in file:
+    nol = nol + 1
+    line = line.strip("\n")
+    noc = noc + len(line)
+
+    words = line.split(" ")
+    now = now + len(words)
+
+file.close()
+
+print("now", now)
+print("noc", noc)
+print("nol", nol)
